@@ -643,7 +643,7 @@ class MutableHeaders(Headers):
         self["vary"] = vary
 
 
-class State(object):
+class State:
     """
     An object that can be used to store arbitrary state.
 
