@@ -1,9 +1,8 @@
 import tempfile
 import typing
 from collections import namedtuple
-from collections.abc import Sequence
 from shlex import shlex
-from typing import Any, Iterator, List, Mapping, Optional, Tuple, Union
+from typing import Any, Iterator, List, Mapping, Optional, Sequence, Tuple, Union
 from urllib.parse import SplitResult, parse_qsl, urlencode, urlsplit
 
 from starlette.concurrency import run_in_threadpool
