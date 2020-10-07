@@ -75,15 +75,15 @@ class URL:
         return self.components.fragment
 
     @property
-    def username(self) -> Union[None, str]:
+    def username(self) -> Optional[str]:
         return self.components.username
 
     @property
-    def password(self) -> Union[None, str]:
+    def password(self) -> Optional[str]:
         return self.components.password
 
     @property
-    def hostname(self) -> Union[None, str]:
+    def hostname(self) -> Optional[str]:
         return self.components.hostname
 
     @property
