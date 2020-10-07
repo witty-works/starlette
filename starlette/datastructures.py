@@ -203,7 +203,7 @@ class Secret:
         return self._value
 
 
-class CommaSeparatedStrings(Sequence):
+class CommaSeparatedStrings(Sequence[str]):
     def __init__(self, value: Union[str, Sequence[str]]):
         if isinstance(value, str):
             splitter = shlex(value, posix=True)
