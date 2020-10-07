@@ -255,7 +255,7 @@ class ImmutableMultiDict(Mapping):
             )
 
         if not value:
-            _items = []  # type: List[Tuple[Any, Any]]
+            _items: List[Tuple[Any, Any]] = []
         elif hasattr(value, "multi_items"):
             value = typing.cast(ImmutableMultiDict, value)
             _items = list(value.multi_items())
@@ -490,7 +490,7 @@ class Headers(Mapping[str, str]):
         raw: List[Tuple[bytes, bytes]] = None,
         scope: Scope = None,
     ) -> None:
-        self._list = []  # type: List[Tuple[bytes, bytes]]
+        self._list: List[Tuple[bytes, bytes]] = []
         if headers is not None:
             assert raw is None, 'Cannot set both "headers" and "raw".'
             assert scope is None, 'Cannot set both "headers" and "scope".'
